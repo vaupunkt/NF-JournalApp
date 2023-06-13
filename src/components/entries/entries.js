@@ -1,5 +1,5 @@
-import star from "./star.svg";
-import starFilled from "./star-filled.svg";
+import star from "../../assets/star.svg";
+import starFilled from "../../assets/star-filled.svg";
 
 export default function Entries() {
 	const date = Date();
