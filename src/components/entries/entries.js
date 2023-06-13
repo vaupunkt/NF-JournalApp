@@ -1,38 +1,61 @@
-import star from "../../assets/star.svg";
-import starFilled from "../../assets/star-filled.svg";
+import { FavoriteButton } from "../button/button.js";
+
+export let entries = [
+	{
+		id: 1000,
+		date: "Feb 5, 2025",
+		motto: "We are in a state of chaos",
+		notes:
+			"Today I learned about React State. It was fun! I can't wait to learn more.",
+	},
+	{
+		id: 999,
+		date: "Feb 4, 2025",
+		motto: "Props, Props, Props",
+		notes:
+			"Today I learned about React Props. Mad props to everyone who understands this!",
+	},
+	{
+		id: 998,
+		date: "Feb 3, 2025",
+		motto: "How to nest components online fast",
+		notes:
+			"Today I learned about React Components and how to nest them like a pro. Application design is so much fun!",
+	},
+	{
+		id: 997,
+		date: "Feb 2, 2025",
+		motto: "I'm a React Developer",
+		notes: "My React-ion when I learned about React: 😍",
+	},
+];
 
 export default function Entries() {
-	const date = Date();
-	let entries = [
-		{
-			date: date,
-			title: "That's life in the city",
-			text: "Here is some text to fill this entry",
-			favorite: true,
-		},
-		{
-			date: date,
-			title: "That's life in the city Part 2",
-			text: "Here is some more text to fill this entry",
-			favorite: false,
-		},
-	];
 	return (
-		<ul>
-			{entries.map((entry) => (
-				<li>
-					<h5>{entry.date}</h5>
-					<h4>{entry.title}</h4>
-					<p>{entry.text}</p>
-					<img
-						src={entry.favorite ? starFilled : star}
-						alt={
-							entry.favorite
-								? "Filled Favorite-Icon (Star)"
-								: "Empty Favorite-Icon (Star)"
-						}></img>
-				</li>
-			))}
+		<ul className="entryList">
+			<MapEntries />
 		</ul>
 	);
+}
+
+function MapEntries() {
+	const entriesReturn = entries.map((entry, index) => (
+		<>
+			<li className="entryList__entry" key={entry.id}>
+				<h5 className="entryList__entryDate">{entry.date}</h5>
+				<h4 className="entryList__entryMotto">
+					"<strong>{entry.motto}</strong>"
+				</h4>
+				<p className="entryList__entryNote">{entry.notes}</p>
+				<FavoriteButton />
+			</li>
+			<Divider />
+		</>
+	));
+
+	return entriesReturn;
+}
+
+function Divider() {
+	return <hr className="entryList__divider"></hr>;
 }
