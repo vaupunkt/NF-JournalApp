@@ -1,6 +1,7 @@
 @import "./components/tabbar/tabbar.css";
 @import "./components/form/form.css";
 @import "./components/entries/entries.css";
+@import "./utils/colors.css";
 
 * {
 	box-sizing: border-box;
@@ -11,6 +12,7 @@
 
 body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	color: var(--color-granite);
 }
 
 main {
@@ -22,15 +24,15 @@ main {
 
 header {
 	text-align: center;
-	background-color: lightgray;
+	background-color: var(--color-water-10);
 	width: 100%;
 	position: absolute;
 	top: 0;
 }
 
 footer {
-	background-color: rgb(70, 70, 70);
-	color: white;
+	background-color: var(--color-granite);
+	color: var(--color-foam);
 	text-align: center;
 	position: absolute;
 	bottom: 0;
