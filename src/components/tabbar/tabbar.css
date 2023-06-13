@@ -1,0 +1,17 @@
+.badge {
+	background-color: lightgray;
+	border-radius: 50%;
+	width: 1.5em;
+	text-align: center;
+}
+
+.tabbar {
+	display: flex;
+	justify-content: space-around;
+}
+
+.tabbar__tab {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
