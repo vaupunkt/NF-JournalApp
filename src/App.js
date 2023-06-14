@@ -1,6 +1,6 @@
 import Header from "./components/header/Header.js";
 import Form from "./components/form/Form.js";
-import Footer from "./components/Footer/Footer.js";
+import Footer from "./components/footer/Footer.js";
 import Tabbar from "./components/tabbar/Tabbar.js";
 import Entries, { entriesArray } from "./components/entries/Entries.js";
 import "./App.css";
