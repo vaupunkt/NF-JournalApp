@@ -1,0 +1,31 @@
+.badge {
+	background-color: lightgray;
+	border-radius: 15px;
+	width: 1.8em;
+	text-align: center;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.tabbar {
+	display: flex;
+	gap: 30px;
+	font-size: 0.75em;
+	padding-top: 50px;
+}
+
+.tabbar__tab {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	cursor: pointer;
+}
+
+.tabbar__tab--active {
+	color: var(--color-nemo);
+}
+
+.tabbar__tab--active .badge {
+	color: var(--color-foam);
+	background-color: var(--color-nemo);
+}

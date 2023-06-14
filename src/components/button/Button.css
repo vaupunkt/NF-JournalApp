@@ -1,0 +1,24 @@
+.entryForm__button {
+	background-color: var(--color-nemo);
+	color: var(--color-foam);
+	min-width: 100px;
+	height: 40px;
+	border-radius: 5px;
+	border-style: none;
+	margin: auto;
+	font-weight: 900;
+}
+
+.entryForm__button:active {
+	background-color: var(--color-nemo-mid);
+}
+
+.entryFrom__button:hover {
+	background-color: var(--color-nemo-dark);
+}
+
+.entryList__entryFavoriteButton img {
+	position: absolute;
+	top: 60px;
+	right: 10px;
+}

@@ -1,0 +1,28 @@
+.entryList {
+	list-style: none;
+	display: none;
+}
+
+.entryList--active {
+	display: block;
+}
+
+.entryList__entry {
+	position: relative;
+	padding-top: 30px;
+}
+
+.entryList__entryDate {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.entryList__entryMotto {
+	padding: 10px 0;
+	width: 90%;
+}
+
+.entryList__divider:last-of-type {
+	display: none;
+}

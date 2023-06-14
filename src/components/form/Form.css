@@ -1,0 +1,23 @@
+.entryForm {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.entryForm__input {
+	padding: 15px;
+	border-radius: 5px;
+	border-color: var(--color-water-10);
+}
+
+.entryForm__input:active {
+	border-color: var(--color-nemo-mid);
+}
+
+.entryForm__title {
+	text-align: center;
+	padding: 20px;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 1.2em;
+}
