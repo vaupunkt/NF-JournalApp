@@ -9,11 +9,19 @@ export function SubmitButton({ children }) {
 		</button>
 	);
 }
+export let [counter, setCounter] = 0;
 
 export function FavoriteButton() {
+	[counter, setCounter] = useState(0);
 	const [isFavorite, setFavorite] = useState(false);
 	function favoriteEntry() {
-		setFavorite(!isFavorite);
+		if (isFavorite === true) {
+			setFavorite(!isFavorite);
+			setCounter(counter - 1);
+		} else {
+			setFavorite(!isFavorite);
+			setCounter(counter + 1);
+		}
 	}
 
 	return (

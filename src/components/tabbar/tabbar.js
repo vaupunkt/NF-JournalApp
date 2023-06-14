@@ -1,4 +1,5 @@
 import { entries } from "../entries/entries.js";
+import { counter } from "../button/button.js";
 
 export default function Tabbar() {
 	const entryNumber = entries.length;
@@ -10,7 +11,7 @@ export default function Tabbar() {
 			</section>
 			<section className="tabbar__tab">
 				<h3>Favorites</h3>
-				<span className="badge">0</span>
+				<span className="badge">{counter}</span>
 			</section>
 		</section>
 	);
