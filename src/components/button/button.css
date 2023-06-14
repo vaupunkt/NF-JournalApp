@@ -17,8 +17,8 @@
 	background-color: var(--color-nemo-dark);
 }
 
-.entryList__entryFavoriteButton img {
+.entryList__entryFavoriteButton {
 	position: absolute;
-	top: 60px;
-	right: 10px;
+	top: 28.5px;
+	right: 5px;
 }

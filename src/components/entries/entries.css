@@ -10,6 +10,8 @@
 .entryList__entry {
 	position: relative;
 	padding-top: 30px;
+
+	word-wrap: break-word;
 }
 
 .entryList__entryDate {
@@ -21,8 +23,13 @@
 .entryList__entryMotto {
 	padding: 10px 0;
 	width: 90%;
+	word-wrap: break-word;
 }
 
 .entryList__divider:last-of-type {
 	display: none;
+}
+
+.entryList__divider {
+	margin-top: 30px;
 }
