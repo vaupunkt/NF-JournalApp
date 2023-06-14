@@ -1,10 +1,18 @@
 import { SubmitButton } from "../button/button.js";
 
-export default function Form() {
+export default function Form({ onAddEntry }) {
+	function handleSubmit(event) {
+		event.preventDefault();
+		const formData = new FormData(event.target);
+		const data = Object.fromEntries(formData);
+		onAddEntry(data);
+		event.target.reset();
+	}
+
 	return (
 		<>
 			<h2 className="entryForm__title">New Entry</h2>
-			<form className="entryForm">
+			<form className="entryForm" onSubmit={handleSubmit}>
 				<label className="entryForm__label" htmlFor="motto">
 					Motto
 				</label>

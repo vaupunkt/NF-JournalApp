@@ -6,6 +6,7 @@
 	border-radius: 5px;
 	border-style: none;
 	margin: auto;
+	font-weight: 900;
 }
 
 .entryForm__button:active {

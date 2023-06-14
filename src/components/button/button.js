@@ -1,6 +1,5 @@
 import star from "../../assets/star.svg";
 import starFilled from "../../assets/star-filled.svg";
-import { useState } from "react";
 
 export function SubmitButton({ children }) {
 	return (
@@ -9,23 +8,12 @@ export function SubmitButton({ children }) {
 		</button>
 	);
 }
-export let [counter, setCounter] = 0;
 
-export function FavoriteButton() {
-	[counter, setCounter] = useState(0);
-	const [isFavorite, setFavorite] = useState(false);
-	function favoriteEntry() {
-		if (isFavorite === true) {
-			setFavorite(!isFavorite);
-			setCounter(counter - 1);
-		} else {
-			setFavorite(!isFavorite);
-			setCounter(counter + 1);
-		}
-	}
-
+export function FavoriteButton({ onToggleFavorite, id, isFavorite }) {
 	return (
-		<button className="entryList__entryFavoriteButton" onClick={favoriteEntry}>
+		<button
+			className="entryList__entryFavoriteButton"
+			onClick={() => onToggleFavorite(id)}>
 			<img
 				className="entryList__entryFavoriteButton"
 				src={isFavorite ? starFilled : star}

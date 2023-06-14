@@ -1,15 +1,29 @@
-import { entries } from "../entries/entries.js";
-import { counter } from "../button/button.js";
+export default function Tabbar({
+	getEntries,
+	onTabChange,
+	isFavoriteTabActive,
+	isAllEntryActive,
+}) {
+	const entryNumber = getEntries.length;
+	let counter = getEntries.filter((entry) => entry.isFavorite).length;
 
-export default function Tabbar() {
-	const entryNumber = entries.length;
 	return (
 		<section className="tabbar">
-			<section className="tabbar__tab tabbar__tab--active">
+			<section
+				onClick={onTabChange}
+				className={
+					isAllEntryActive ? "tabbar__tab tabbar__tab--active" : "tabbar__tab"
+				}>
 				<h3>All Entries</h3>
 				<span className="badge">{entryNumber}</span>
 			</section>
-			<section className="tabbar__tab">
+			<section
+				onClick={onTabChange}
+				className={
+					isFavoriteTabActive
+						? "tabbar__tab tabbar__tab--active"
+						: "tabbar__tab"
+				}>
 				<h3>Favorites</h3>
 				<span className="badge">{counter}</span>
 			</section>

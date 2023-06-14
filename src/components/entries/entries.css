@@ -1,5 +1,10 @@
 .entryList {
 	list-style: none;
+	display: none;
+}
+
+.entryList--active {
+	display: block;
 }
 
 .entryList__entry {
