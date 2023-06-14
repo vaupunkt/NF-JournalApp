@@ -1,4 +1,5 @@
-import { FavoriteButton } from "../button/button.js";
+import { FavoriteButton } from "../button/Button.js";
+import "./Entries.css";
 
 export let entriesArray = [
 	{

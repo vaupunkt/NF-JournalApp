@@ -1,4 +1,5 @@
-import { SubmitButton } from "../button/button.js";
+import { SubmitButton } from "../button/Button.js";
+import "./Form.css";
 
 export default function Form({ onAddEntry }) {
 	function handleSubmit(event) {

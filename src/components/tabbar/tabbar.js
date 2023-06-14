@@ -1,3 +1,5 @@
+import "./Tabbar.css";
+
 export default function Tabbar({
 	getEntries,
 	onTabChange,

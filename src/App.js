@@ -1,11 +1,11 @@
-import Header from "./components/header.js";
-import Form from "./components/form/form.js";
-import Footer from "./components/footer.js";
-import Tabbar from "./components/tabbar/tabbar.js";
-import Entries, { entriesArray } from "./components/entries/entries.js";
-import "./global.css";
+import Header from "./components/header/Header.js";
+import Form from "./components/form/Form.js";
+import Footer from "./components/Footer/Footer.js";
+import Tabbar from "./components/tabbar/Tabbar.js";
+import Entries, { entriesArray } from "./components/entries/Entries.js";
+import "./App.css";
 import { useState } from "react";
-import { v4 as uuid } from "uuid";
+import { uid } from "uid";
 
 function App() {
 	const [entries, setEntries] = useState(entriesArray);
@@ -40,7 +40,7 @@ function App() {
 			", " +
 			newDate.getFullYear();
 		console.log(date);
-		setEntries([...entries, { id: uuid(), date: date, ...newEntry }]);
+		setEntries([...entries, { id: uid(), date: date, ...newEntry }]);
 	}
 
 	const [favoriteTabActive, setFavoriteTabActive] = useState(false);

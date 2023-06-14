@@ -1,0 +1,9 @@
+header {
+	text-align: center;
+	background-color: var(--color-water-10);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	font-variant-caps: all-small-caps;
+	z-index: 1;
+}

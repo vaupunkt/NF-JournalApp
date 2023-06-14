@@ -1,5 +1,6 @@
 import star from "../../assets/star.svg";
 import starFilled from "../../assets/star-filled.svg";
+import "./Button.css";
 
 export function SubmitButton({ children }) {
 	return (
