@@ -39,7 +39,6 @@ function App() {
 			newDate.getDate() +
 			", " +
 			newDate.getFullYear();
-		console.log(date);
 		setEntries([...entries, { id: uid(), date: date, ...newEntry }]);
 	}
 
