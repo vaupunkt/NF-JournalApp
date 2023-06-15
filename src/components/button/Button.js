@@ -26,3 +26,14 @@ export function FavoriteButton({ onToggleFavorite, id, isFavorite }) {
 		</button>
 	);
 }
+
+export function TabbbarButton({ onTabChange, filter, badge, content }) {
+	return (
+		<button
+			onClick={onTabChange}
+			className={filter ? "tabbar__tab tabbar__tab--active" : "tabbar__tab"}>
+			<h3>{content}</h3>
+			<span className="badge">{badge}</span>
+		</button>
+	);
+}

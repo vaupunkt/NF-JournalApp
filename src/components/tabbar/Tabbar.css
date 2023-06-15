@@ -9,23 +9,7 @@
 
 .tabbar {
 	display: flex;
-	gap: 30px;
+	gap: 20px;
 	font-size: 0.75em;
 	padding-top: 50px;
-}
-
-.tabbar__tab {
-	display: flex;
-	gap: 5px;
-	align-items: center;
-	cursor: pointer;
-}
-
-.tabbar__tab--active {
-	color: var(--color-nemo);
-}
-
-.tabbar__tab--active .badge {
-	color: var(--color-foam);
-	background-color: var(--color-nemo);
 }

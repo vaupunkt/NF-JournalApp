@@ -6,9 +6,12 @@ import Entries, { entriesArray } from "./components/entries/Entries.js";
 import "./App.css";
 import { useState } from "react";
 import { uid } from "uid";
+import useLocalStorageState from "use-local-storage-state";
 
 function App() {
-	const [entries, setEntries] = useState(entriesArray);
+	const [entries, setEntries] = useLocalStorageState("entries", {
+		defaultValue: entriesArray,
+	});
 	function handleToggleFavorite(id) {
 		setEntries(
 			entries.map((entry) =>
@@ -17,29 +20,10 @@ function App() {
 		);
 	}
 	function handleAddEntry(newEntry) {
-		const newDate = new Date();
-		const monthNames = [
-			"Jan",
-			"Feb",
-			"Mar",
-			"Apr",
-			"May",
-			"Jun",
-			"Jul",
-			"Aug",
-			"Sep",
-			"Oct",
-			"Nov",
-			"Dez",
-		];
-		const month = newDate.getMonth();
-		let date =
-			monthNames[month] +
-			" " +
-			newDate.getDate() +
-			", " +
-			newDate.getFullYear();
-		setEntries([...entries, { id: uid(), date: date, ...newEntry }]);
+		const date = new Date().toLocaleDateString("en-us", {
+			dateStyle: "medium",
+		});
+		setEntries([{ id: uid(), date: date, ...newEntry }, ...entries]);
 	}
 
 	const [favoriteTabActive, setFavoriteTabActive] = useState(false);

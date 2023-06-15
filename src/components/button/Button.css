@@ -23,3 +23,27 @@
 	right: 5px;
 	border-style: none;
 }
+
+.tabbar__tab {
+	display: flex;
+	gap: 5px;
+	padding: 10px;
+	align-items: center;
+	cursor: pointer;
+	border-style: none;
+	border-radius: 20px;
+	background-color: var(--color-foam);
+}
+
+.tabbar__tab:hover {
+	background-color: var(--color-water-10);
+}
+
+.tabbar__tab--active {
+	color: var(--color-nemo);
+}
+
+.tabbar__tab--active .badge {
+	color: var(--color-foam);
+	background-color: var(--color-nemo);
+}
